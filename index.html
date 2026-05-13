@@ -4,11 +4,24 @@
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
   </head>
   <body>
-     <a-scene>
-     	<a-marker preset="hiro">
-        	<a-text value="Hello, World!"></a-text>
-      	</a-marker>
-    	<a-entity camera></a-entity>
+    <body>
+    
+      <a-scene arjs="debugUIEnabled: false">
+
+      <a-asset>
+        <a-asset-item
+          id="skull"
+          src="hier den Pfad zum asset einfügen">
+        </a-asset-item>
+      </a-asset>
+
+      <a-marker preset="hiro">
+         <a-entity gltf-model="#skull" scale="0.01 0.01 0.01" rotation="-90 -90 90"></a-entity>
+      </a-marker>
+      
+      <a-entity camera></a-entity>
     </a-scene>
+ 
+  </body>
  </body>
 </html>
